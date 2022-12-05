@@ -70,6 +70,7 @@ jobs:
               -e DATABASE_PORT=${{ secrets.DATABASE_PORT }} \
               -e DATABASE_USERNAME=${{ secrets.DATABASE_USERNAME }} \
               -e APP_ADMIN_JWT_SECRET=${{ secrets.APP_ADMIN_JWT_SECRET }} \
+              -e APP_JWT_SECRET=${{ secrets.APP_JWT_SECRET }} \
               -e APP_API_TOKEN_SALT=${{ secrets.APP_API_TOKEN_SALT }} \
               -e APP_KEYS=${{ secrets.APP_KEYS }} \
               -e AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }} \

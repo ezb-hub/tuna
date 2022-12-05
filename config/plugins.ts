@@ -1,3 +1,5 @@
+import crypto from 'crypto';
+
 export default ({ env }) => ({
   upload: {
     config: {
@@ -14,6 +16,14 @@ export default ({ env }) => ({
         upload: {},
         uploadStream: {},
         delete: {},
+      },
+    },
+  },
+  'users-permissions': {
+    config: {
+      jwtSecret: env('APP_JWT_SECRET') || crypto.randomBytes(16).toString('base64'),
+      jwt: {
+        expiresIn: '1d',
       },
     },
   },
