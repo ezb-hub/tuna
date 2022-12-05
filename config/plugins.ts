@@ -11,6 +11,7 @@ export default ({ env }) => ({
         params: {
           Bucket: env("AWS_BUCKET"),
         },
+        sizeLimit: 5 * 1024 * 1024
       },
       actionOptions: {
         upload: {},
@@ -30,5 +31,5 @@ export default ({ env }) => ({
   seo: {
     enabled: true,
   },
-  ckeditor: true
+  ckeditor: true,
 });
