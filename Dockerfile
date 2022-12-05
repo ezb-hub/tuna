@@ -10,7 +10,7 @@ RUN yarn install --frozen-lockfile
 
 COPY . .
 
-RUN yarn build
+RUN NODE_ENV=production yarn build
 
 EXPOSE 1337
 
