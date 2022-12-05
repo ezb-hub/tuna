@@ -8,7 +8,7 @@ WORKDIR ${APP}
 
 COPY package.json yarn.lock ${APP}
 
-RUN yarn install --prod --frozen-lockfile
+RUN yarn install --prod --frozen-lockfile --ignore-engines
 
 COPY . .
 
