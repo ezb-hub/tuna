@@ -1,4 +1,4 @@
-import crypto from 'crypto';
+import crypto from "crypto";
 
 export default ({ env }) => ({
   upload: {
@@ -11,7 +11,7 @@ export default ({ env }) => ({
         params: {
           Bucket: env("AWS_BUCKET"),
         },
-        sizeLimit: 5 * 1024 * 1024
+        sizeLimit: 5 * 1024 * 1024,
       },
       actionOptions: {
         upload: {},
@@ -20,11 +20,12 @@ export default ({ env }) => ({
       },
     },
   },
-  'users-permissions': {
+  "users-permissions": {
     config: {
-      jwtSecret: env('APP_JWT_SECRET') || crypto.randomBytes(16).toString('base64'),
+      jwtSecret:
+        env("APP_JWT_SECRET") || crypto.randomBytes(16).toString("base64"),
       jwt: {
-        expiresIn: '1d',
+        expiresIn: "1d",
       },
     },
   },
@@ -32,4 +33,16 @@ export default ({ env }) => ({
     enabled: true,
   },
   ckeditor: true,
+  graphql: {
+    config: {
+      endpoint: "/graphql",
+      shadowCRUD: true,
+      playgroundAlways: false,
+      depthLimit: 7,
+      amountLimit: 100,
+      apolloServer: {
+        tracing: false,
+      },
+    },
+  },
 });
