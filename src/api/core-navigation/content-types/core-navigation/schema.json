@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "core_navigations",
+  "info": {
+    "singularName": "core-navigation",
+    "pluralName": "core-navigations",
+    "displayName": "CORE NAVIGATION",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "url": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "order": {
+      "type": "integer",
+      "required": true,
+      "unique": true
+    }
+  }
+}

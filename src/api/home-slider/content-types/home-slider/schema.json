@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "navigations",
+  "collectionName": "home_sliders",
   "info": {
-    "singularName": "navigation",
-    "pluralName": "navigations",
-    "displayName": "Navigation",
-    "description": ""
+    "singularName": "home-slider",
+    "pluralName": "home-sliders",
+    "displayName": "HOME_SLIDER"
   },
   "options": {
     "draftAndPublish": true
@@ -17,15 +16,19 @@
       "required": true,
       "unique": true
     },
-    "url": {
+    "sub_title": {
       "type": "string",
       "required": true,
       "unique": true
     },
-    "order": {
-      "required": true,
-      "unique": true,
-      "type": "integer"
+    "media": {
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
     }
   }
 }
