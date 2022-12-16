@@ -17,15 +17,15 @@
       "required": true,
       "unique": true
     },
-    "url": {
-      "type": "string",
-      "required": true,
-      "unique": true
-    },
     "order": {
       "type": "integer",
       "required": true,
       "unique": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
     }
   }
 }
