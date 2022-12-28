@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "home_products",
+  "collectionName": "categories",
   "info": {
-    "singularName": "home-product",
-    "pluralName": "home-products",
-    "displayName": "HOME_PRODUCT"
+    "singularName": "category",
+    "pluralName": "categories",
+    "displayName": "CATEGORY"
   },
   "options": {
     "draftAndPublish": true
